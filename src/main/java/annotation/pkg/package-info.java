@@ -1,0 +1,2 @@
+@PkgAnnotation
+package annotation.pkg;
