@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Context>
+    <!--
+        name       JNDI的名称
+        url        数据库的jdbc连接
+        username   用户名
+        password   数据库密码
+    -->
+    <Resource name="jdbc/ssm"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://192.168.56.3:3306/ssm?zeroDateTimeBehavior=converToNull"
+              username="root"
+              password="072012"
+    />
+</Context>

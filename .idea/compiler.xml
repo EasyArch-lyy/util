@@ -9,5 +9,8 @@
         <module name="springtest" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mybatistest" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

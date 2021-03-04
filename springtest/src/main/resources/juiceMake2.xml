@@ -1,0 +1,4 @@
+<bean id="juiceMaker2" class="passive.pojo.JuiceMaker2">
+    <property name="beverageShop" value="贡茶"/>
+    <property name="source" ref="source"/>
+</bean>

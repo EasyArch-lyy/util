@@ -1,0 +1,5 @@
+<bean id="source" class="passive.pojo.Source">
+    <property name="fruit" value="橙汁" />
+    <property name="sugar" value="少糖" />
+    <property name="size" value="大杯" />
+</bean>

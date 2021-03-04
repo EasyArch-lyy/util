@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <!--BeanPostProcessor定义-->
+    <bean id="beanPostProcessor" class="passive.bean.BeanPostProcessorImpl" />
+
+    <bean id="source" class="passive.pojo.Source">
+        <property name="fruit" value="橙汁"/>
+        <property name="sugar" value="少糖"/>
+        <property name="size" value="大杯"/>
+    </bean>
+    <bean id="juiceMaker2" class="passive.pojo.JuiceMaker2">
+        <property name="beverageShop" value="贡茶"/>
+        <property name="source" ref="source"/>
+    </bean>
+
+    <bean id="role1" class="injection.pojo.Role">
+        <property name="id" value="1"/>
+        <property name="roleName" value="role_name_1"/>
+        <property name="note" value="role_note_1"/>
+    </bean>
+
+    <bean id="role2" class="injection.pojo.Role">
+        <property name="id" value="2"/>
+        <property name="roleName" value="role_name_2"/>
+        <property name="note" value="role_note_2"/>
+    </bean>
+
+    <bean id="user1" class="injection.pojo.User">
+        <property name="id" value="1"/>
+        <property name="userName" value="user_name_1"/>
+        <property name="note" value="role_note_1"/>
+    </bean>
+
+    <bean id="user2" class="injection.pojo.User">
+        <property name="id" value="2"/>
+        <property name="userName" value="user_name_2"/>
+        <property name="note" value="role_note_2"/>
+    </bean>
+
+    <bean id="userRoleAssembly" class="injection.UserRoleAssembly">
+        <property name="id" value="1"/>
+        <property name="list">
+            <list>
+                <ref bean="role1"/>
+                <ref bean="role2"/>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key-ref="role1" value-ref="user1"/>
+                <entry key-ref="role2" value-ref="user2"/>
+            </map>
+        </property>
+        <property name="set">
+            <set>
+                <ref bean="role1"/>
+                <ref bean="role2"/>
+            </set>
+        </property>
+    </bean>
+</beans>

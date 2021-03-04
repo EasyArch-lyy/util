@@ -1,0 +1,15 @@
+<beans>
+    <bean id="role1" class="injection.pojo.Role">
+        <!--
+            constructor-arg用于定义构造器方法的参数
+            index用于定义参数的位置
+        -->
+        <constructor-arg index="0" value="总经理" />
+        <constructor-arg index="1" value="公司管理者" />
+    </bean>
+    <!--通过反射调用没有参数的构造方法生成对象，通过反射对应的setter注入配置(spring中最主要的方式)-->
+    <bean id="role2" class="injection.pojo.Role">
+        <property name="roleName" value="高级工程师" />
+        <property name="note" value="重要人员" />
+    </bean>
+</beans>
