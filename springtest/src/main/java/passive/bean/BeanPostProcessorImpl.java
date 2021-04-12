@@ -9,7 +9,7 @@ public class BeanPostProcessorImpl implements BeanPostProcessor {
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        System.out.println("["+bean.getClass().getSimpleName()+"]对象"+beanName+"开始实例化");
+        System.out.println("[" + bean.getClass().getSimpleName() + "]对象" + beanName + "开始实例化");
         return bean;
     }
 

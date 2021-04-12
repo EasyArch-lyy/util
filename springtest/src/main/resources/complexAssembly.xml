@@ -1,4 +1,4 @@
-<bean id="complexAssembly" class="assembly.ComplexAssembly">
+<bean id="complexAssembly" class="assembly.xmltest.pojo.ComplexAssembly">
     <property id="id" value="1"/>
     <property name="list">
         <list>
